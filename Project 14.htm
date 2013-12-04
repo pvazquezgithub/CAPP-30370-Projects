@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)file:///C:/Users/Philip/AppData/Local/Temp/Temp1_codepen_ArknD%20(2).zip/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta charset="UTF-8">
+
+  <title>CodePen - A Pen by pvazquez</title>
+
+</head>
+
+<body>
+
+  
+
+  <meta charset="utf-8">
+  <title>Project 14</title>
+  <style>
+    html {margin:1em; font-family:Helvetica, Arial, sans-serif;}
+    h2 {clear:both;}
+    .box {width:200px; height:200px; border:1px solid #000; background-color:#ddd;}
+  </style>
+
+
+  <header><h1>Project 14</h1></header>
+
+  <h2>Source and Target</h2>
+  <h3>Source</h3>
+  <input type="text" id="text1" placeholder="Type here">
+  <h3>Target</h3>
+  <input type="text" id="text2" readonly="true" placeholder="Echo the result here">
+  <script>
+    document.getElementById("text1").addEventListener("keyup",function(){    
+    var text = document.getElementById("text1").value;    
+    document.getElementById("text2").value = text;
+    });
+
+  </script>
+
+  <hr>
+
+  <h2>Image Swap</h2>
+  <img id="kitten" src="./CodePen - A Pen by pvazquez_files/200" title="A kitten" alt="A kitten"><br>
+  <input type="text" id="get-img" placeholder="Enter image url here"><button id="update-img">Update</button>
+  <script>
+
+  document.getElementById('update-img').addEventListener("click",function(){
+
+    var pic = document.getElementById('get-img').value;
+    document.getElementById('kitten').setAttribute('src',pic);
+
+    });
+
+  </script>
+
+  <hr>
+
+  <h2>Font Sizer</h2>
+  <p id="to-style">This is my paragraph of stuff.</p><br>
+  <input type="text" id="font-size" placeholder="Enter a font size"><button id="font-button">Make it so</button>
+  <script>
+
+     document.getElementById('font-button').addEventListener("click",function(){
+    var font = document.getElementById('font-size').value;
+    document.getElementById('to-style').style.fontSize= font ;
+
+    });
+
+  </script>
+
+  <hr>
+
+  <h2>Attribute Reporter</h2>
+  <img id="kitten2" src="./CodePen - A Pen by pvazquez_files/200" title="A kitten" alt="A kitten"><br>
+  <button id="get-attr">Log Attributes</button>
+  <script>
+    document.getElementById('get-attr').addEventListener("click",function(){
+   var input = document.getElementById('kitten2');
+    console.log(input.getAttribute('src'));
+    console.log(input.getAttribute('alt'));
+
+    });
+
+  </script>
+
+  <hr>
+
+  <h2>Element Counter</h2>
+  <input type="text" id="element-type" placeholder="Which element?"><br>
+  <button id="count">Count the Elements</button>
+  <input type="text" id="element-count" placeholder="Results here" readonly="true">
+  <script>
+     document.getElementById('count').addEventListener("click",function(){
+    var text  = document.getElementById('element-type').value;
+    var count = document.querySelectorAll(text).length;
+     document.getElementById('element-count').value = count;
+
+    });
+
+  </script>
+
+
+
+
+
+
+</body></html>
